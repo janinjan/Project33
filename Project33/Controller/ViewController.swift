@@ -9,7 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    // MARK: - Properties
+    static var isDirty = true
 
+    // MARK: - ViewController LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "What's that whistle?"
@@ -17,6 +20,7 @@ class ViewController: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: nil, action: nil)
     }
 
+    // MARK: - Methods
     @objc func addWhistle() {
         let recordVC = RecordWhistleViewController()
         navigationController?.pushViewController(recordVC, animated: true)

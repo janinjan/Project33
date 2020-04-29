@@ -17,6 +17,7 @@
 		3DFF4F8F2459A11800757A9E /* SelectGenreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF4F8E2459A11800757A9E /* SelectGenreTableViewController.swift */; };
 		3DFF4F912459E7C600757A9E /* AddCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF4F902459E7C600757A9E /* AddCommentsViewController.swift */; };
 		3DFF4F932459E9EE00757A9E /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF4F922459E9EE00757A9E /* SubmitViewController.swift */; };
+		3DFF4F9B2459F28300757A9E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFF4F9A2459F28300757A9E /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		3DFF4F8E2459A11800757A9E /* SelectGenreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGenreTableViewController.swift; sourceTree = "<group>"; };
 		3DFF4F902459E7C600757A9E /* AddCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentsViewController.swift; sourceTree = "<group>"; };
 		3DFF4F922459E9EE00757A9E /* SubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
+		3DFF4F982459F27400757A9E /* Project33.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Project33.entitlements; sourceTree = "<group>"; };
+		3DFF4F9A2459F28300757A9E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFF4F9B2459F28300757A9E /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +54,7 @@
 			children = (
 				3DFF4F772459872100757A9E /* Project33 */,
 				3DFF4F762459872100757A9E /* Products */,
+				3DFF4F992459F28300757A9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +69,7 @@
 		3DFF4F772459872100757A9E /* Project33 */ = {
 			isa = PBXGroup;
 			children = (
+				3DFF4F982459F27400757A9E /* Project33.entitlements */,
 				3DFF4F972459EA0B00757A9E /* SupportingFiles */,
 				3DFF4F942459E9F800757A9E /* Model */,
 				3DFF4F952459E9FD00757A9E /* View */,
@@ -109,6 +115,14 @@
 				3DFF4F782459872100757A9E /* AppDelegate.swift */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		3DFF4F992459F28300757A9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DFF4F9A2459F28300757A9E /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Project33/Project33.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6FCPFN549;
 				INFOPLIST_FILE = "$(SRCROOT)/Project33/SupportingFiles/Info.plist";
@@ -350,6 +365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Project33/Project33.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6FCPFN549;
 				INFOPLIST_FILE = "$(SRCROOT)/Project33/SupportingFiles/Info.plist";

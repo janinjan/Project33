@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class SubmitViewController: UIViewController {
     // MARK: - Properties
@@ -65,11 +66,33 @@ class SubmitViewController: UIViewController {
         stackView.addArrangedSubview(status)
         stackView.addArrangedSubview(activityIndicator)
     }
-    
-    func doSubmission() {
 
+    func doSubmission() {
+        let whistleRecord = CKRecord(recordType: "Whistles") // this is an object to contain keys and values
+        whistleRecord["genre"] = genre as CKRecordValue // like this we convert String to CKRecordValue
+        whistleRecord["comments"] = comments as CKRecordValue
+
+        let audioURL = RecordWhistleViewController.getWhistleURL()
+        let whistleAsset = CKAsset(fileURL: audioURL) // upload audio to CKAsset before it's attached
+        whistleRecord["audio"] = whistleAsset
+
+        CKContainer.default().publicCloudDatabase.save(whistleRecord) { [unowned self] (record, error) in
+            DispatchQueue.main.async {
+                if error != nil {
+                    self.status.text = "Error"
+                    self.activityIndicator.stopAnimating()
+                } else {
+                    self.view.backgroundColor = UIColor(red: 0, green: 0.6, blue: 0, alpha: 1)
+                    self.status.text = "Done!"
+                    self.activityIndicator.stopAnimating()
+                    
+                    ViewController.isDirty = true
+                }
+                self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneTapped))
+            }
+        }
     }
-    
+
     @objc func doneTapped() {
         _ = navigationController?.popToRootViewController(animated: true) // _ is to silence an “unused result”
     }
