@@ -177,7 +177,8 @@ class RecordWhistleViewController: UIViewController {
     }
 
     @objc func nextTapped() {
-        
+        let vc = SelectGenreTableViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

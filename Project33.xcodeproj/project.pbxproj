@@ -14,6 +14,9 @@
 		3DFF4F822459872400757A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DFF4F812459872400757A9E /* Assets.xcassets */; };
 		3DFF4F852459872400757A9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFF4F832459872400757A9E /* LaunchScreen.storyboard */; };
 		3DFF4F8D245988EA00757A9E /* RecordWhistleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF4F8C245988EA00757A9E /* RecordWhistleViewController.swift */; };
+		3DFF4F8F2459A11800757A9E /* SelectGenreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF4F8E2459A11800757A9E /* SelectGenreTableViewController.swift */; };
+		3DFF4F912459E7C600757A9E /* AddCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF4F902459E7C600757A9E /* AddCommentsViewController.swift */; };
+		3DFF4F932459E9EE00757A9E /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF4F922459E9EE00757A9E /* SubmitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		3DFF4F842459872400757A9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DFF4F862459872400757A9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DFF4F8C245988EA00757A9E /* RecordWhistleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordWhistleViewController.swift; sourceTree = "<group>"; };
+		3DFF4F8E2459A11800757A9E /* SelectGenreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGenreTableViewController.swift; sourceTree = "<group>"; };
+		3DFF4F902459E7C600757A9E /* AddCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentsViewController.swift; sourceTree = "<group>"; };
+		3DFF4F922459E9EE00757A9E /* SubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,51 @@
 		3DFF4F772459872100757A9E /* Project33 */ = {
 			isa = PBXGroup;
 			children = (
-				3DFF4F782459872100757A9E /* AppDelegate.swift */,
-				3DFF4F7A2459872100757A9E /* SceneDelegate.swift */,
-				3DFF4F7C2459872100757A9E /* ViewController.swift */,
-				3DFF4F7E2459872100757A9E /* Main.storyboard */,
-				3DFF4F812459872400757A9E /* Assets.xcassets */,
-				3DFF4F832459872400757A9E /* LaunchScreen.storyboard */,
-				3DFF4F862459872400757A9E /* Info.plist */,
-				3DFF4F8C245988EA00757A9E /* RecordWhistleViewController.swift */,
+				3DFF4F972459EA0B00757A9E /* SupportingFiles */,
+				3DFF4F942459E9F800757A9E /* Model */,
+				3DFF4F952459E9FD00757A9E /* View */,
+				3DFF4F962459EA0200757A9E /* Controller */,
 			);
 			path = Project33;
+			sourceTree = "<group>";
+		};
+		3DFF4F942459E9F800757A9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3DFF4F952459E9FD00757A9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DFF4F832459872400757A9E /* LaunchScreen.storyboard */,
+				3DFF4F7E2459872100757A9E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DFF4F962459EA0200757A9E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3DFF4F7C2459872100757A9E /* ViewController.swift */,
+				3DFF4F8C245988EA00757A9E /* RecordWhistleViewController.swift */,
+				3DFF4F8E2459A11800757A9E /* SelectGenreTableViewController.swift */,
+				3DFF4F902459E7C600757A9E /* AddCommentsViewController.swift */,
+				3DFF4F922459E9EE00757A9E /* SubmitViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3DFF4F972459EA0B00757A9E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3DFF4F7A2459872100757A9E /* SceneDelegate.swift */,
+				3DFF4F812459872400757A9E /* Assets.xcassets */,
+				3DFF4F862459872400757A9E /* Info.plist */,
+				3DFF4F782459872100757A9E /* AppDelegate.swift */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFF4F932459E9EE00757A9E /* SubmitViewController.swift in Sources */,
 				3DFF4F7D2459872100757A9E /* ViewController.swift in Sources */,
 				3DFF4F792459872100757A9E /* AppDelegate.swift in Sources */,
 				3DFF4F8D245988EA00757A9E /* RecordWhistleViewController.swift in Sources */,
+				3DFF4F8F2459A11800757A9E /* SelectGenreTableViewController.swift in Sources */,
+				3DFF4F912459E7C600757A9E /* AddCommentsViewController.swift in Sources */,
 				3DFF4F7B2459872100757A9E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6FCPFN549;
-				INFOPLIST_FILE = Project33/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Project33/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6FCPFN549;
-				INFOPLIST_FILE = Project33/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Project33/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
