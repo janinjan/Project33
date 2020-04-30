@@ -20,6 +20,7 @@
 		3DFF4F9B2459F28300757A9E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFF4F9A2459F28300757A9E /* CloudKit.framework */; };
 		3DFF4F9D245AC8FC00757A9E /* Whistle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF4F9C245AC8FC00757A9E /* Whistle.swift */; };
 		3DFF4F9F245AE85D00757A9E /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF4F9E245AE85D00757A9E /* ResultsTableViewController.swift */; };
+		3DFF4FA1245B219E00757A9E /* MyGenresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF4FA0245B219E00757A9E /* MyGenresTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		3DFF4F9A2459F28300757A9E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		3DFF4F9C245AC8FC00757A9E /* Whistle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whistle.swift; sourceTree = "<group>"; };
 		3DFF4F9E245AE85D00757A9E /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		3DFF4FA0245B219E00757A9E /* MyGenresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGenresTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				3DFF4F902459E7C600757A9E /* AddCommentsViewController.swift */,
 				3DFF4F922459E9EE00757A9E /* SubmitViewController.swift */,
 				3DFF4F9E245AE85D00757A9E /* ResultsTableViewController.swift */,
+				3DFF4FA0245B219E00757A9E /* MyGenresTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				3DFF4F9D245AC8FC00757A9E /* Whistle.swift in Sources */,
 				3DFF4F932459E9EE00757A9E /* SubmitViewController.swift in Sources */,
 				3DFF4F7D2459872100757A9E /* ViewController.swift in Sources */,
+				3DFF4FA1245B219E00757A9E /* MyGenresTableViewController.swift in Sources */,
 				3DFF4F792459872100757A9E /* AppDelegate.swift in Sources */,
 				3DFF4F8D245988EA00757A9E /* RecordWhistleViewController.swift in Sources */,
 				3DFF4F8F2459A11800757A9E /* SelectGenreTableViewController.swift in Sources */,
