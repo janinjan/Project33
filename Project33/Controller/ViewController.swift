@@ -107,4 +107,11 @@ class ViewController: UITableViewController {
         cell.textLabel?.numberOfLines = 0
         return cell
     }
+
+    // MARK: - TableView Delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let resultController = ResultsTableViewController()
+        resultController.whistle = whistles[indexPath.row]
+        navigationController?.pushViewController(resultController, animated: true)
+    }
 }

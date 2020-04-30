@@ -40,7 +40,7 @@ class SelectGenreTableViewController: UITableViewController {
 
     // MARK: - TableView Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") {
+        if let cell = tableView.cellForRow(at: indexPath) {
             let genre = cell.textLabel?.text ?? SelectGenreTableViewController.genres[0]
             let vc = AddCommentsViewController()
             vc.genre = genre
