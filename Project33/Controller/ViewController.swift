@@ -41,7 +41,43 @@ class ViewController: UITableViewController {
     }
 
     func loadWhistles() {
+        // PART ON: Create a query, addit to a CKQueryOperation
+        let pred = NSPredicate(value: true) // it's a filter to decide which result to show
+        let sort = NSSortDescriptor(key: "creationDate", ascending: false) // tells CloudKit which field we want to sort on, and whether we want it ascending or descending.
+        let query = CKQuery(recordType: "Whistles", predicate: pred) // Combines a predicate and sort descriptors with the name of the record type we want to query.
+        query.sortDescriptors = [sort]
+
+        let operation = CKQueryOperation(query: query) // is the work horse of CloudKit data fetching, executing a query and returning results.
+        operation.desiredKeys = ["genre", "comments"]
+        operation.resultsLimit = 50
+
+        var newWhistles = [Whistle]()
+
+        // PART TWO AND THREE : Configured its two closures to handle downloading data
+        operation.recordFetchedBlock = { record in // This will be given one CKRecord value for every record that gets downloaded
+            let whistle = Whistle() // We'll convert that into a Whistle object
+            whistle.recordID = record.recordID
+            whistle.genre = record["genre"]
+            whistle.comments = record["comments"]
+            newWhistles.append(whistle)
+        }
+
+        operation.queryCompletionBlock = { [unowned self] (cursor, error) in
+            DispatchQueue.main.async {
+                if error == nil {
+                    ViewController.isDirty = false
+                    self.whistles = newWhistles
+                    self.tableView.reloadData()
+                } else {
+                    let alert = UIAlertController(title: "Fetch failed", message: "There was a problem fetching the list of whistles; please try again: \(error!.localizedDescription)", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    self.present(alert, animated: true)
+                }
+            }
+        }
         
+        // ASK CloudKit to run it
+        CKContainer.default().publicCloudDatabase.add(operation)
     }
 
     // To show a text neatly formatted
