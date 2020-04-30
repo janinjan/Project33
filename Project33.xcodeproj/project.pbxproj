@@ -18,6 +18,7 @@
 		3DFF4F912459E7C600757A9E /* AddCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF4F902459E7C600757A9E /* AddCommentsViewController.swift */; };
 		3DFF4F932459E9EE00757A9E /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF4F922459E9EE00757A9E /* SubmitViewController.swift */; };
 		3DFF4F9B2459F28300757A9E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFF4F9A2459F28300757A9E /* CloudKit.framework */; };
+		3DFF4F9D245AC8FC00757A9E /* Whistle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF4F9C245AC8FC00757A9E /* Whistle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		3DFF4F922459E9EE00757A9E /* SubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
 		3DFF4F982459F27400757A9E /* Project33.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Project33.entitlements; sourceTree = "<group>"; };
 		3DFF4F9A2459F28300757A9E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		3DFF4F9C245AC8FC00757A9E /* Whistle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whistle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		3DFF4F942459E9F800757A9E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3DFF4F9C245AC8FC00757A9E /* Whistle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFF4F9D245AC8FC00757A9E /* Whistle.swift in Sources */,
 				3DFF4F932459E9EE00757A9E /* SubmitViewController.swift in Sources */,
 				3DFF4F7D2459872100757A9E /* ViewController.swift in Sources */,
 				3DFF4F792459872100757A9E /* AppDelegate.swift in Sources */,
