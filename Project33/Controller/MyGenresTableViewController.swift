@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class MyGenresTableViewController: UITableViewController {
     // MARK: - Properties
@@ -32,6 +33,42 @@ class MyGenresTableViewController: UITableViewController {
     // MARK: - Methods
     @objc func saveTapped() {
         defaults.set(myGenres, forKey: "myGenres")
+
+        let database = CKContainer.default().publicCloudDatabase
+
+        database.fetchAllSubscriptions { [unowned self] subscriptions, error in
+            if error == nil {
+                if let subscriptions = subscriptions {
+                    for subscription in subscriptions {
+                        database.delete(withSubscriptionID: subscription.subscriptionID) { str, error in
+                            if error != nil {
+                                print(error!.localizedDescription)
+                            }
+                        }
+                    }
+
+                    for genre in self.myGenres {
+                        let predicate = NSPredicate(format:"genre = %@", genre)
+                        let subscription = CKQuerySubscription(recordType: "Whistles", predicate: predicate, options: .firesOnRecordCreation)
+
+                        let notification = CKSubscription.NotificationInfo()
+                        notification.alertBody = "There's a new whistle in the \(genre) genre."
+                        notification.soundName = "default"
+
+                        subscription.notificationInfo = notification
+
+                        database.save(subscription) { result, error in
+                            if let error = error {
+                                print(error.localizedDescription)
+                            }
+                        }
+                    }
+                }
+            } else {
+                // do your error handling here!
+                print(error!.localizedDescription)
+            }
+        }
     }
 
     // MARK: - TableView DataSource
